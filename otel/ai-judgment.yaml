@@ -1,0 +1,80 @@
+groups:
+  - id: ai.judgment
+    type: event
+    prefix: ai.judgment
+    brief: >
+      AI Judgment Trail event representing a decision made by an AI system.
+    note: >
+      This semantic convention defines structured logging for AI system decisions,
+      enabling post-incident accountability and observability.
+    attributes:
+      - id: timestamp
+        type: string
+        brief: ISO-8601 UTC timestamp when the decision was made
+        requirement_level: required
+        examples: ["2025-01-15T14:32:11Z"]
+
+      - id: run_id
+        type: string
+        brief: Unique identifier for this specific AI execution
+        requirement_level: required
+        examples: ["550e8400-e29b-41d4-a716-446655440000"]
+        note: Should be a UUID v4
+
+      - id: model
+        type: string
+        brief: AI model identifier used for this decision
+        requirement_level: required
+        examples: ["gpt-4", "claude-3-opus", "llama-2-70b"]
+
+      - id: decision
+        type: string
+        brief: Decision made by the system
+        requirement_level: required
+        examples: ["allow", "block", "escalate", "review"]
+        note: Application-specific decision codes
+
+      - id: risk_level
+        type: string
+        brief: Assessed risk level for this decision
+        requirement_level: required
+        examples: ["low", "medium", "high", "critical"]
+        note: Risk assessment performed by policy engine, not by AJT
+
+      - id: human_in_loop
+        type: boolean
+        brief: Whether a human reviewed or approved this decision
+        requirement_level: required
+        examples: [true, false]
+
+      - id: policy_version
+        type: string
+        brief: Version identifier of the decision policy applied
+        requirement_level: required
+        examples: ["v2.3.1", "policy-20250115"]
+        note: Enables tracking policy changes over time
+
+      - id: app_version
+        type: string
+        brief: Version of the application making the AI call
+        requirement_level: required
+        examples: ["1.0.5", "main-abc1234"]
+
+      - id: session_id
+        type: string
+        brief: User or request session identifier
+        requirement_level: required
+        examples: ["user-session-abc123", "req-550e8400"]
+        note: Should be anonymized if PII concerns exist
+
+    constraints:
+      - any_of:
+          - include: timestamp
+          - include: run_id
+          - include: model
+          - include: decision
+          - include: risk_level
+          - include: human_in_loop
+          - include: policy_version
+          - include: app_version
+          - include: session_id
