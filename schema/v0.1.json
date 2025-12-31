@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AI Judgment Trail (AJT) v0.1",
+  "description": "Minimal structured log schema for AI decision accountability",
+  "type": "object",
+  "required": [
+    "timestamp",
+    "run_id",
+    "model",
+    "decision",
+    "risk_level",
+    "human_in_loop",
+    "policy_version",
+    "app_version",
+    "session_id"
+  ],
+  "properties": {
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO-8601 UTC timestamp of when the decision was made"
+    },
+    "run_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this specific AI execution"
+    },
+    "model": {
+      "type": "string",
+      "description": "AI model identifier (e.g., 'gpt-4', 'claude-3-opus')"
+    },
+    "decision": {
+      "type": "string",
+      "description": "Decision made by the system (e.g., 'allow', 'block', 'escalate')"
+    },
+    "risk_level": {
+      "type": "string",
+      "description": "Assessed risk level (e.g., 'low', 'medium', 'high')"
+    },
+    "human_in_loop": {
+      "type": "boolean",
+      "description": "Whether a human reviewed or approved this decision"
+    },
+    "policy_version": {
+      "type": "string",
+      "description": "Version identifier of the decision policy applied"
+    },
+    "app_version": {
+      "type": "string",
+      "description": "Version of the application making the AI call"
+    },
+    "session_id": {
+      "type": "string",
+      "description": "User or request session identifier (anonymized if needed for privacy)"
+    }
+  },
+  "additionalProperties": true
+}
