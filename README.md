@@ -167,6 +167,12 @@ A: Logging 9 fields is negligible. Use async logging if you're latency-sensitive
 
 ---
 
+## FAQ
+
+See [FAQ.md](FAQ.md) for common questions about scope and non-goals.
+
+---
+
 ## License
 
 Apache 2.0 - see [LICENSE](LICENSE)
