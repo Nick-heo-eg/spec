@@ -1,6 +1,11 @@
 # Why This Exists
 
-AI Judgment Trail (AJT) exists to solve a problem that most systems only notice **after something goes wrong**.
+AI systems fail in many ways.
+But responsibility failures are the hardest to recover from.
+
+AJT exists to answer one question cleanly:
+
+**Who allowed this to happen?**
 
 When an AI system causes harm, confusion, or loss, the questions are rarely about performance.
 
@@ -27,7 +32,7 @@ Observability tools help us understand **what happened**.
 
 But when incidents occur, the critical question changes:
 
-> **Why was this allowed to happen?**
+> **Why was this explicitly allowed to happen?**
 
 Traditional logs and traces struggle here because responsibility is implicit:
 
@@ -49,7 +54,7 @@ Everything here is built around four ideas.
 
 ---
 
-### 1. STOP
+### 1. STOP is a decision, not a failure
 
 STOP is not a failure.
 
@@ -68,7 +73,7 @@ as first-class decision outcomes, not errors.
 
 ---
 
-### 2. Boundary
+### 2. Boundaries define authority, not behavior
 
 A boundary is not a prompt.
 It is not a model.
@@ -83,7 +88,7 @@ It **records which boundary was in effect** when a decision was made.
 
 ---
 
-### 3. Judgment Trail (AJT)
+### 3. AJT records permission, not reasoning
 
 AJT is not:
 
@@ -105,7 +110,7 @@ Nothing more. Nothing less.
 
 ---
 
-### 4. Before Execution
+### 4. Responsibility exists before execution
 
 Most tools operate *after* execution:
 
@@ -136,6 +141,9 @@ AJT is designed to **attach to existing stacks**, not compete with them.
 
 If you already log structured JSON, you can emit AJT.
 
+**AJT does not decide for your system.**
+**It ensures you can prove who decided, when it mattered.**
+
 ---
 
 ## Why This Exists Now (Even If You Don't Need It Yet)
@@ -157,7 +165,7 @@ AJT exists early so that:
 * the concept is available
 * the schema is simple
 * adoption is cheap
-* responsibility does not need to be reverse-engineered later
+* responsibility does not need to be reconstructed under pressure
 
 ---
 
