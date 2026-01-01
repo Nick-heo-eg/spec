@@ -2,13 +2,28 @@
 
 **Minimal structured log schema for AI decision accountability**
 
+## Why This Exists
+
+AI systems fail in many ways.
+But when they do, the hardest question is never "what happened".
+
+It is: **who was responsible for allowing it?**
+
+AI Judgment Trail (AJT) exists to make responsibility explicit
+at the moment a decision is made — before execution occurs.
+
+**Safety is not censorship.**
+**Safety is traceability.**
+
+📄 Full context: [Why This Exists](./why-this-exists.md)
+
+---
+
 AJT is a lightweight, vendor-neutral log format designed to answer one question after an AI incident:
 
 > "Which model ran, under what policy, at what risk level, and did a human intervene?"
 
 This is **not** a compliance framework. This is **not** an enforcement tool. This is a log schema that costs you one structured line per AI call.
-
-📄 **Why this exists:** [Why This Exists](./why-this-exists.md)
 
 ---
 
