@@ -143,6 +143,14 @@ There's nothing to install. AJT is a schema, not a package.
 
 ---
 
+## Examples
+
+See [ajt-negative-proof-sim](https://github.com/Nick-heo-eg/ajt-negative-proof-sim) for a concrete simulation demonstrating negative proof using this spec.
+
+The simulation shows how AJT can be extended with optional fields (e.g., `negative_proof_count`, `applied_rule_ids`) while maintaining spec compliance.
+
+---
+
 ## Roadmap
 
 - **v0.1** (current): Core 9-field schema
