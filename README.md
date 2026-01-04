@@ -2,6 +2,24 @@
 
 **Minimal structured log schema for AI decision accountability**
 
+## When standard logs are enough — and when they aren't
+
+As of today, most production AI systems pass audits using standard logging stacks (CloudTrail, Datadog, immutable storage, etc.).
+
+**If nothing goes wrong, this is usually sufficient.**
+
+The problem appears after an incident.
+
+Post-incident scrutiny no longer asks:
+> "What happened?"
+
+It asks:
+> "Why was this specific AI decision allowed at that moment?"
+
+AI Judgment Trail (AJT) exists to answer that question by recording the judgment context at decision time — before execution, blame, or reconstruction begins.
+
+---
+
 ## Why This Exists
 
 AI systems fail in many ways.
