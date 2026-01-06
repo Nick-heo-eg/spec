@@ -8,6 +8,8 @@
 
 **Any action offering generation or execution MUST be gated by this interface.**
 
+**Action includes generation, recommendation, transformation, execution, or any output intended for human or machine decision-making.**
+
 ### Required Functions
 
 All systems implementing conditional admission must provide:
@@ -33,6 +35,8 @@ SCOPE_OF_VALIDITY(token) -> ContextHash
 **DEFAULT: STOP**
 **OVERRIDE: Only if ALL conditions below are proven**
 
+**Failure to prove any single required condition results in immediate STOP without fallback.**
+
 ### Rule 1 — Responsibility Gate
 
 ```
@@ -44,6 +48,8 @@ THEN STOP(reason="no_responsibility_proof")
 - Identity of decision maker (who)
 - Action boundary (what)
 - Justification (why)
+
+**decision_maker MUST be a traceable human or registered system identity. Anonymous or default values are invalid.**
 
 ### Rule 2 — Conditional Admission
 
@@ -102,12 +108,24 @@ proof: {
 }
 ```
 
+### Context Hash Requirements
+
+**context_hash MUST be derived from**:
+- Input payload
+- Time window
+- Environment identifiers
+- Decision scope
+
+**Manually supplied or reused context_hash values invalidate the token.**
+
 ### Token Lifecycle
 
 1. **Issuance**: Only when all admission rules pass
 2. **Validation**: Context hash must match at use time
 3. **Revocation**: Automatic on context change or expiration
 4. **Reuse**: Forbidden — one token, one execution
+
+**Context change includes any modification to input, environment, time, or intended downstream usage.**
 
 ### Non-transferability
 
