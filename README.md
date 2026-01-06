@@ -1,5 +1,12 @@
 # AI Judgment Trail (AJT)
 
+> **Judgment Minimal Definition (JMD)**
+>
+> AJT records not outcomes, but the existence of choice.
+> An event qualifies as a judgment if and only if multiple outcome paths existed,
+> at least one non-selected path was explicitly evaluated,
+> and the selected outcome is recorded as a choice among those paths.
+
 **Minimal structured log schema for AI decision accountability**
 
 **Try it now:** `python3 examples/run_ajt_demo.py`
@@ -113,6 +120,8 @@ Try it now: `python3 examples/run_ajt_demo.py`
 | `policy_version` | string | Version of decision policy applied |
 | `app_version` | string | Version of your application |
 | `session_id` | string | User/request session identifier |
+
+**Note:** `judgment` is a computed property derived from JMD conditions and MUST NOT be asserted manually.
 
 ---
 
