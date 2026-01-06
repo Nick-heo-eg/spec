@@ -184,9 +184,14 @@ AJT is defined here as a minimal, structured trace format for making AI decision
 
 Other repositories in this ecosystem are derived from this spec:
 
+- [**ajt-grounded-extract**](https://github.com/Nick-heo-eg/ajt-grounded-extract) ([PyPI](https://pypi.org/project/ajt-grounded-extract/)): **Reference implementation** — Judgment-first grounded extraction engine with constitutional controls. Returns ACCEPT with evidence or STOP with proof. Production-ready, zero dependencies.
 - [**stop-first-rag**](https://github.com/Nick-heo-eg/stop-first-rag): an upstream decision system that produces explicit STOP events
 - **ajt-negative-proof-sim**: a simulation demonstrating audit-grade negative proof
 - **judgment-execution-evidence**: a read-only repository of raw decision evidence
+
+**Relationship:**
+- **ajt-spec** (this repository): Constitutional rules — what must be proven
+- **ajt-grounded-extract**: Execution + case law — how it's proven in practice
 
 **This repository defines what AJT *is*.**
 Other repositories show how it is *used* or *stored*.
