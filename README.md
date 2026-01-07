@@ -178,7 +178,7 @@ AJT just structures the record so you can explain it later.
 
 ## AJT Ecosystem
 
-This repository is the **authoritative specification** of AJT (Auditability & Justification Traces).
+This repository is the **authoritative specification** of AJT (AI Judgment Trail).
 
 AJT is defined here as a minimal, structured trace format for making AI decisions auditable — including decisions that resulted in non-actions (STOP, abstention, blocked paths).
 
