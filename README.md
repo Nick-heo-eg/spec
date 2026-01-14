@@ -1,5 +1,12 @@
 # AI Judgment Trail (AJT)
 
+This repository documents experimental execution during research.
+It does not represent a production system, live authority, or active enforcement.
+
+---
+
+
+
 > **Judgment Minimal Definition (JMD)**
 >
 > AJT records not outcomes, but the existence of choice.
