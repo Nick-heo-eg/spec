@@ -1,5 +1,17 @@
 # AI Judgment Trail (AJT)
 
+> ⚠️ **Status: Internal Draft (Referenced for Conceptual Discussion)**
+>
+> This repository contains an *internal schema draft* used during the design of AI judgment accountability mechanisms.
+>
+> It is referenced in public discussions as a **conceptual example only**.
+> The schema is **not stable, not complete, and not intended for reuse**.
+>
+> ➡️ **For public discussion and validated examples:**
+> → https://github.com/Nick-heo-eg/k-judgment-gate
+
+---
+
 Minimal schema for accountable AI decision traces.
 
 This repository documents experimental execution during research.
