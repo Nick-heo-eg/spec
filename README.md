@@ -7,7 +7,7 @@ a set of experiments and specifications focused on
 *when AI systems must stop or not execute*.
 
 See the overarching map:
-→ https://github.com/Nick-heo-eg/stop-first-rag/blob/main/JUDGMENT_BOUNDARY_MANIFEST.md
+→ https://github.com/Nick-heo-eg/stop-first-rag/blob/master/JUDGMENT_BOUNDARY_MANIFEST.md
 
 ---
 
