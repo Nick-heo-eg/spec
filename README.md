@@ -11,6 +11,12 @@ See the overarching map:
 
 ---
 
+## Reference-Only Notice
+This repository provides reference-level examples.
+It is non-normative and does not define requirements, enforcement, or compliance guarantees.
+
+---
+
 > ⚠️ **Status: Internal Draft (Referenced for Conceptual Discussion)**
 >
 > This repository contains an *internal schema draft* used during the design of AI judgment accountability mechanisms.
